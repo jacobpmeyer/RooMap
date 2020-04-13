@@ -1,10 +1,10 @@
 # RooMap
 
 ## MVP
-RooMap is an interactive map of Centeroo, the heart of the Bonnaroo Music and Arts Festival featuring
-- A zoomable map of centeroo
+RooMap is an interactive map of the Bonnaroo Music and Arts Festival featuring
+- A zoomable map of the Bonnaroo festival grounds
 - Clicking on a location zooms to that spot on the map
-- Zooming on a particular location reveals a photo of the real area to help people who have never been to Bonnaroo orient themselves to the 77 acres of centeroo
+- Zooming on a particular location reveals a photo of the real area to help people who have never been to Bonnaroo orient themselves to the 700 acre festival grounds
 -  A navigation modal in the top right of the screen that lists the ways to navigate the map
 
 Bonus Features
