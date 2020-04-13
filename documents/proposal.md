@@ -13,8 +13,10 @@ Bonus Features
 
 ## Wirefames
 - This will be a single page app that has one navigation modal when the map is fully zoomed out
+![Roo map zoomed out](https://github.com/jacobpmeyer/RooMap/blob/master/documents/roomap_wireframe_main.png?raw=true "Map on first load")
 
 - When zoomed in on a location, a photo will prensent on the screen, off center, relative to the navigation modal.
+![Roo map zoomed in](https://github.com/jacobpmeyer/RooMap/blob/master/documents/roomap_wireframe_zoomed.png?raw=true "Map when zoomed on location")
 
 ## Technologies
 - Javascript
