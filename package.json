@@ -1,0 +1,26 @@
+{
+  "name": "roo_map",
+  "version": "1.0.0",
+  "description": "## Background The Bonnaroo Music and Arts festival takes up an enormous amount of land and can be very challenging to navigate, especially for first time attendees, but also even for seasoned vets. The idea behind RooMap is to give the festival-goers an interactive map based on the official map of the year. This map would be zoomable, which would be especially helpful for mobile users and would feature pictures of each selectable location on the map, with special attention being given to Centeroo, the main festival grounds of Bonnaroo. My intention with this app is be a replacement to the non-interactive pdf used each year by Bonnarro on their website and their mobile app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "webpack",
+    "webpack": "webpack --mode=development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobpmeyer/RooMap.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jacobpmeyer/RooMap/issues"
+  },
+  "homepage": "https://github.com/jacobpmeyer/RooMap#readme",
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
