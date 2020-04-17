@@ -1,7 +1,16 @@
+import * as mapText from "./MapText";
+
 class MapRoo {
-  constructor(pageWidth) {
+  constructor(pageWidth, name) {
     this.bg = document.getElementById("background");
     this.pageWidth = pageWidth;
+    this.img = document.getElementById("location-img");
+    this.title = document.getElementById("info-title");
+    this.landmarks = document.getElementById("info-landmarks");
+    this.content = document.getElementById("info-content");
+    this.title.innerText = mapText[name].title;
+    this.landmarks.innerText = mapText[name].landmarks;
+    this.content.innerText = mapText[name].content;
   }
 
   calculate({ offsetX, x }, base) {
@@ -19,6 +28,8 @@ class MapRoo {
     // screen, as to give the modal room to exist
     let coordY = 85;
     const val = this.calculate({ offsetX, x: event.x }, coordX);
+    this.img.src =
+      "https://github.com/jacobpmeyer/RooMap/blob/master/images/kaliope.jpg?raw=true";
     return (this.bg.style.backgroundPosition = `${val}px ${coordY}%`);
   }
 
@@ -28,6 +39,8 @@ class MapRoo {
     let coordX = -540;
     let coordY = 85;
     const val = this.calculate({ offsetX, x: event.x }, coordX);
+    this.img.src =
+      "https://github.com/jacobpmeyer/RooMap/blob/master/images/which_stage.jpeg?raw=true";
     return (this.bg.style.backgroundPosition = `${val}px ${coordY}%`);
   }
 
@@ -37,15 +50,19 @@ class MapRoo {
     let coordX = -310;
     let coordY = 37;
     const val = this.calculate({ offsetX, x: event.x }, coordX);
+    this.img.src =
+      "https://github.com/jacobpmeyer/RooMap/blob/master/images/other1.jpg?raw=true";
     return (this.bg.style.backgroundPosition = `${val}px ${coordY}%`);
   }
 
-  this(event) {
+  thisStage(event) {
     let leftOff = this.pageWidth * 0.21;
     let offsetX = event.offsetX + leftOff;
     let coordX = -248;
     let coordY = 66;
     const val = this.calculate({ offsetX, x: event.x }, coordX);
+    this.img.src =
+      "https://github.com/jacobpmeyer/RooMap/blob/master/images/this.jpeg?raw=true";
     return (this.bg.style.backgroundPosition = `${val}px ${coordY}%`);
   }
 
@@ -55,6 +72,8 @@ class MapRoo {
     let coordX = -470;
     let coordY = 60;
     const val = this.calculate({ offsetX, x: event.x }, coordX);
+    this.img.src =
+      "https://github.com/jacobpmeyer/RooMap/blob/master/images/mush2.jpg?raw=true";
     return (this.bg.style.backgroundPosition = `${val}px ${coordY}%`);
   }
 
@@ -64,6 +83,8 @@ class MapRoo {
     let coordX = -360;
     let coordY = 50;
     const val = this.calculate({ offsetX, x: event.x }, coordX);
+    this.img.src =
+      "https://github.com/jacobpmeyer/RooMap/blob/master/images/discolineup.jpg?raw=true";
     return (this.bg.style.backgroundPosition = `${val}px ${coordY}%`);
   }
 
@@ -73,6 +94,8 @@ class MapRoo {
     let coordX = -660;
     let coordY = 60;
     const val = this.calculate({ offsetX, x: event.x }, coordX);
+    this.img.src =
+      "https://github.com/jacobpmeyer/RooMap/blob/master/images/who.jpeg?raw=true";
     return (this.bg.style.backgroundPosition = `${val}px ${coordY}%`);
   }
 
@@ -82,6 +105,8 @@ class MapRoo {
     let coordX = -720;
     let coordY = 46;
     const val = this.calculate({ offsetX, x: event.x }, coordX);
+    this.img.src =
+      "https://github.com/jacobpmeyer/RooMap/blob/master/images/that.jpeg?raw=true";
     return (this.bg.style.backgroundPosition = `${val}px ${coordY}%`);
   }
 
@@ -91,6 +116,8 @@ class MapRoo {
     let coordX = -830;
     let coordY = 95;
     const val = this.calculate({ offsetX, x: event.x }, coordX);
+    this.img.src =
+      "https://github.com/jacobpmeyer/RooMap/blob/master/images/what.jpg?raw=true";
     return (this.bg.style.backgroundPosition = `${val}px ${coordY}%`);
   }
 
@@ -100,103 +127,9 @@ class MapRoo {
     let coordX = -515;
     let coordY = 43;
     const val = this.calculate({ offsetX, x: event.x }, coordX);
+    this.img.src =
+      "https://github.com/jacobpmeyer/RooMap/blob/master/images/snakejake.jpg?raw=true";
     return (this.bg.style.backgroundPosition = `${val}px ${coordY}%`);
   }
 }
 export default MapRoo;
-
-// class MapRoo {
-//   constructor(pageWidth) {
-//     this.bg = document.getElementById("background");
-//     this.pageWidth = pageWidth;
-//   }
-
-//   calculate({ offsetX, x }, base) {
-//     const val = (offsetX - x) / 2.5 + base;
-//     return val;
-//   }
-
-//   // leftOff is the percentage away from the left the box is times the screen width.
-//   kaliope(event) {
-//     let leftOff = this.pageWidth * 0.08;
-//     let offsetX = event.offsetX + leftOff;
-//     let coordX = 200;
-//     let coordY = -20;
-//     const val = this.calculate({ offsetX, x: event.x }, coordX);
-//     console.log("Inside Kaliope");
-//     return (this.bg.style.transform = `scale(2.5) translate(${val}px, ${coordY}%)`);
-//   }
-
-//   which(event) {
-//     let leftOff = this.pageWidth * 0.32;
-//     let offsetX = event.offsetX + leftOff;
-//     let coordX = 27;
-//     let coordY = -22;
-//     const val = this.calculate({ offsetX, x: event.x }, coordX);
-//     return (this.bg.style.transform = `scale(2.5) translate(${val}px, ${coordY}%)`);
-//   }
-
-//   other(event) {
-//     let leftOff = this.pageWidth * 0.21;
-//     let offsetX = event.offsetX + leftOff;
-//     let coordX = -310;
-//     let coordY = 42;
-//     const val = this.calculate({ offsetX, x: event.x }, coordX);
-//     return (this.bg.style.backgroundPosition = `${val}px ${coordY}%`);
-//   }
-
-//   what(event) {
-//     let leftOff = this.pageWidth * 0.21;
-//     let offsetX = event.offsetX + leftOff;
-//     let coordX = -310;
-//     let coordY = 42;
-//     const val = this.calculate({ offsetX, x: event.x }, coordX);
-//     return (this.bg.style.backgroundPosition = `${val}px ${coordY}%`);
-//   }
-
-//   that(event) {
-//     let leftOff = this.pageWidth * 0.21;
-//     let offsetX = event.offsetX + leftOff;
-//     let coordX = -310;
-//     let coordY = 42;
-//     const val = this.calculate({ offsetX, x: event.x }, coordX);
-//     return (this.bg.style.backgroundPosition = `${val}px ${coordY}%`);
-//   }
-
-//   this(event) {
-//     let leftOff = this.pageWidth * 0.21;
-//     let offsetX = event.offsetX + leftOff;
-//     let coordX = -310;
-//     let coordY = 42;
-//     const val = this.calculate({ offsetX, x: event.x }, coordX);
-//     return (this.bg.style.backgroundPosition = `${val}px ${coordY}%`);
-//   }
-
-//   who(event) {
-//     let leftOff = this.pageWidth * 0.21;
-//     let offsetX = event.offsetX + leftOff;
-//     let coordX = -310;
-//     let coordY = 42;
-//     const val = this.calculate({ offsetX, x: event.x }, coordX);
-//     return (this.bg.style.backgroundPosition = `${val}px ${coordY}%`);
-//   }
-
-//   mushroom(event) {
-//     let leftOff = this.pageWidth * 0.21;
-//     let offsetX = event.offsetX + leftOff;
-//     let coordX = -310;
-//     let coordY = 42;
-//     const val = this.calculate({ offsetX, x: event.x }, coordX);
-//     return (this.bg.style.backgroundPosition = `${val}px ${coordY}%`);
-//   }
-
-//   sd(event) {
-//     let leftOff = this.pageWidth * 0.21;
-//     let offsetX = event.offsetX + leftOff;
-//     let coordX = -310;
-//     let coordY = 42;
-//     const val = this.calculate({ offsetX, x: event.x }, coordX);
-//     return (this.bg.style.backgroundPosition = `${val}px ${coordY}%`);
-//   }
-// }
-// export default MapRoo;

@@ -1,25 +1,33 @@
 import MapRoo from "./MapRoo";
+import * as mapText from "./MapText";
 
 document.addEventListener("DOMContentLoaded", function () {
   const root = document.getElementById("root");
-  const modal = document.getElementById("modal");
+  const imgModal = document.getElementById("img-modal");
+  const infoModal = document.getElementById("info-modal");
   const modalOverlay = document.getElementById("modal-overlay");
   const background = document.getElementById("background");
   const wrapper = document.getElementById("wrapper");
   const nav = document.getElementById("nav");
+  const img = document.getElementById("location-img");
 
   const closeModal = () => {
     background.classList.remove("zoom", "small");
     wrapper.classList.remove("oh");
     modalOverlay.classList.remove("modal-overlay");
-    modal.classList.remove("modal");
+    imgModal.classList.remove("img-modal");
+    infoModal.classList.remove("info-modal");
     background.setAttribute("style", "");
     nav.innerHTML = "Click on a landmark to show info";
   };
 
   const openModal = () => {
     modalOverlay.classList.add("modal-overlay");
-    modal.classList.add("modal");
+    infoModal.classList.add("info-modal");
+    const om = setTimeout(() => {
+      imgModal.classList.add("img-modal");
+      clearTimeout(om);
+    }, 2000);
     nav.innerHTML = "Click anywhere to close and zoom out";
   };
 
@@ -28,13 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
     wrapper.classList.add("oh");
     background.classList.add("small", "zoom");
     const id = e.target.id;
-    const mapPoint = new MapRoo(window.innerHeight);
+    const mapPoint = new MapRoo(window.innerHeight, id);
     mapPoint[id](e);
-    const om = setTimeout(() => {
-      openModal();
-      console.log("inside the timeout");
-      clearTimeout(om);
-    }, 2000);
+    openModal();
   });
 
   function zoom(event) {
@@ -50,10 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Restrict scale
     scale = Math.min(Math.max(0.125, scale), 4);
     // Apply scale transform
-    wrapper.style.transform = `scale(${scale})`;
+    img.style.transform = `scale(${scale})`;
   }
   let scale = 1;
-  document.onwheel = zoom;
+  img.onwheel = zoom;
 
   modalOverlay.addEventListener("click", closeModal);
+
+  window.name = mapText["kaliope"];
 });
