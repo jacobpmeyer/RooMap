@@ -158,6 +158,11 @@ body {
   transform: scale(2.3) translate(205px, -18%);
 }
 
+  hr {
+    width: 75%;
+    border: 1px solid black;
+  }
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -218,3 +223,74 @@ body {
   overflow: scroll;
 }
 
+@media all and (min-width: 1001px) {
+  #nav {
+    width: 32%;
+    height: 10%;
+    top: 5%;
+    right: 8.6%;
+    background: linear-gradient(106deg, rgba(141,199,62,1) 0%, rgba(18,161,219,1) 100%);
+    border-radius: 4px;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: translate;
+  }
+
+  .info-modal {
+    min-width: 35%;
+    min-height: 15%;
+    position: fixed;
+    z-index: 100;
+    top: 29%;
+    left: 75%;
+    transform: translate;
+    background: rgb(198,113,174);
+    background: linear-gradient(148deg, rgba(198,113,174,1) 0%, rgba(125,95,168,1) 100%);
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+  }
+
+  #info-title {
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    font-size: 2.7rem;
+  }
+
+  #info-landmarks, #info-content {
+    font-size: 22px;
+  }
+
+  .img-modal {
+    width: 30%;
+    min-width: 40%;
+    height: 52%;
+    min-height: 52%;
+    position: absolute;
+    z-index: 100;
+    top: 70%;
+    left: 75%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #location-img {
+    background-image: linear-gradient(to bottom right, #EE90A6, #DBD936);
+    height: 100%;
+    width: initial;
+    border-radius: 5px;
+    padding: 5px;
+  }
+}
