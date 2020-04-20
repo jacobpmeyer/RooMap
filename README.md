@@ -3,28 +3,35 @@
 ## Live link
 https://jacobpmeyer.github.io/RooMap/
 
-## Background
-The Bonnaroo Music and Arts festival takes up an enormous amount of land and can be very challenging to navigate, especially for first time attendees, but also even for seasoned vets. The idea behind RooMap is to give the festival-goers an interactive map based on the official map of the year. This map would be zoomable, which would be especially helpful for mobile users and would feature pictures of each selectable location on the map, with special attention being given to Centeroo, the main festival grounds of Bonnaroo. My intention with this app is be a replacement to the non-interactive pdf used each year by Bonnarro on their website and their mobile app.
-
-## MVP
-RooMap is an interactive map of the Bonnaroo Music and Arts Festival featuring
-- A zoomable map of the Bonnaroo festival grounds
-- Clicking on a location zooms to that spot on the map
-- Zooming on a particular location reveals a photo of the real area to help people who have never been to Bonnaroo orient themselves to the 700 acre festival grounds
--  A navigation modal in the top right of the screen that lists the ways to navigate the map
-
-Bonus Features
-- A photo carousel on each location to help further orient patrons to their location
-- Directions to other locations based on the location currently selected
-
-## Wirefames
-- This will be a single page app that has one navigation modal when the map is fully zoomed out
-![Roo map zoomed out](https://github.com/jacobpmeyer/RooMap/blob/master/documents/roomap_wireframe_main.png?raw=true "Map on first load")
-
-- When zoomed in on a location, a photo will prensent on the screen, off center, relative to the navigation modal.
-![Roo map zoomed in](https://github.com/jacobpmeyer/RooMap/blob/master/documents/roomap_wireframe_zoomed.png?raw=true "Map when zoomed on location")
+## Intstructions
+To interact with the map, simply click or tap any of the stages or tents(and even some other locations). A photo and some information about the location will apear to help you find your way around the venue a little more easily
 
 ## Technologies
 - Javascript
-- D3
 - HTML/CSS
+
+## Challenges
+Getting the map to focus on the location point from anywhere that they might be viewing the map was the most challenging. In the end, the desired result was achieved by mulptiplying the page width by the percentage from left that the box is, then adding that to the difference of the event offsetX and the event x.
+``` javascript
+calculate({ offsetX, x }, base) {
+    const val = offsetX - x + base;
+    return val;
+  }
+
+kaliope(event) {
+  // leftOff is the percentage away from the left the box is times the screen width.
+  let leftOff = this.pageWidth * 0.08;
+  let offsetX = event.offsetX + leftOff;
+  let coordX = -85;
+  // coordY is the percentage away from the top the start of the
+  // element is, plus about 5 percent to place it at the bottom of the
+  // screen, as to give the modal room to exist
+  let coordY = 85;
+  const val = this.calculate({ offsetX, x: event.x }, coordX);
+  this.img.src = "https://github.com/jacobpmeyer/RooMap/blob/master/images/kaliope.jpg?raw=true";
+  return (this.bg.style.backgroundPosition = `${val}px ${coordY}%`);
+}
+```
+## To-dos
+- Collect more location photos
+- Add more landmarks to select

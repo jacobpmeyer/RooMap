@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   background.addEventListener("click", (e) => {
-    if (e.target.id === "background") return console.log(e.offsetX);
+    if (e.target.id === "background") return;
     wrapper.classList.add("oh");
     background.classList.add("small", "zoom");
     const id = e.target.id;
@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function zoom(event) {
-    console.log("inside zoom");
     event.preventDefault();
     if (event.deltaY < 0) {
       // Zoom in
