@@ -24,8 +24,6 @@ kaliope(event) {
   let offsetX = event.offsetX + leftOff;
   let coordX = -85;
   // coordY is the percentage away from the top the start of the
-  // element is, plus about 5 percent to place it at the bottom of the
-  // screen, as to give the modal room to exist
   let coordY = 85;
   const val = this.calculate({ offsetX, x: event.x }, coordX);
   this.img.src = "https://github.com/jacobpmeyer/RooMap/blob/master/images/kaliope.jpg?raw=true";
