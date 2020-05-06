@@ -1,7 +1,7 @@
 # RooMap
 
 ## Live link 
-https://jacobpmeyer.github.io/RooMap/
+https://roomap.jacobmeyer.dev/
 
 ## Background
 The Bonnaroo Music and Arts festival takes up an enormous amount of land and can be very challenging to navigate, especially for first time attendees, but also even for seasoned vets. The idea behind RooMap is to give the festival-goers an interactive map based on the official map of the year. This map would be zoomable, which would be especially helpful for mobile users and would feature pictures of each selectable location on the map, with special attention being given to Centeroo, the main festival grounds of Bonnaroo. My intention with this app is be a replacement to the non-interactive pdf used each year by Bonnarro on their website and their mobile app.
