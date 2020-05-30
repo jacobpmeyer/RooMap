@@ -4,7 +4,7 @@
 https://roomap.jacobmeyer.dev/
 
 ## Instructions
-To interact with the map, simply click or tap any of the stages or tents(and even some other locations). A photo and some information about the location will apear to help you find your way around the venue a little more easily
+To interact with the map, simply click or tap any of the stages or tents(and even some other locations). A photo and some information about the location will apear to help you find your way around the venue a little more easily. 
 
 ## Technologies
 - Javascript
