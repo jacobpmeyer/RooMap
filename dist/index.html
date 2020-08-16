@@ -1,40 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
-  <title>Document</title>
-  <script src="main.js"></script>
-</head>
-<body>
-  <main id="root">
-    <div id="wrapper" class="wrapper">
-      <div id="background" class="background">
-        <div id="kaliope" class="border position"></div>
-        <div id="which" class="border position"></div>
-        <div id="other" class="border position"></div>
-        <div id="what" class="border position"></div>
-        <div id="that" class="border position"></div>
-        <div id="thisStage" class="border position"></div>
-        <div id="who" class="border position"></div>
-        <div id="mushroom" class="border position"></div>
-        <div id="sd" class="border position"></div>
-        <div id="snakejake" class="border position"></div>
-        <div id="nav" class="fixed">Click on a landmark to show info</div>
-      </div>
-      <div id="modal-overlay" class="">
-        <div id="img-modal" class="none">
-          <img id="location-img" src="" alt="">
-        </div>
-        <div id="info-modal" class="">
-          <div id="info-title"></div>
-          <div id="info-landmarks"></div>
-          <div id="info-content"></div>
-        </div>
-      </div>
-    </div>
-  </main>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="An interactive map of Bonnaroo Music and Arts Festival"
+        />
+        <meta property="og:title" content="FidelityFog" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://fidelityfog.herokuapp.com" />
+        <meta
+            property="og:description"
+            content="An interactive map of Bonnaroo Music and Arts Festival"
+        />
+        <meta
+            property="og:image"
+            content="https://musicmaestro-seed.s3.us-east-2.amazonaws.com/roomap.jpg"
+        />
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Cabin&display=swap"
+            rel="stylesheet"
+        />
+        <title>Document</title>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <main id="root">
+            <div id="wrapper" class="wrapper">
+                <div id="background" class="background">
+                    <div id="kaliope" class="border position"></div>
+                    <div id="which" class="border position"></div>
+                    <div id="other" class="border position"></div>
+                    <div id="what" class="border position"></div>
+                    <div id="that" class="border position"></div>
+                    <div id="thisStage" class="border position"></div>
+                    <div id="who" class="border position"></div>
+                    <div id="mushroom" class="border position"></div>
+                    <div id="sd" class="border position"></div>
+                    <div id="snakejake" class="border position"></div>
+                    <div id="nav" class="fixed">
+                        Click on a landmark to show info
+                    </div>
+                </div>
+                <div id="modal-overlay" class="">
+                    <div id="img-modal" class="none">
+                        <img id="location-img" src="" alt="" />
+                    </div>
+                    <div id="info-modal" class="">
+                        <div id="info-title"></div>
+                        <div id="info-landmarks"></div>
+                        <div id="info-content"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
 </html>
